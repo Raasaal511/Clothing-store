@@ -61,7 +61,7 @@ class Product(models.Model):
     sizes = models.ManyToManyField(Size)
     gender = models.CharField(choices=gender, max_length=2)
     season = models.CharField(choices=season, max_length=10)
-    image = models.ImageField(upload_to='product/%Y/%M')
+    image = models.ImageField(upload_to='product/%Y/%M', null=True, blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Цена товара')
     slug = models.SlugField(unique=True)
 

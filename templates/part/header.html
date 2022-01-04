@@ -1,31 +1,3 @@
-<header>
-<form action="">
-<div class="dropdown">
-  <button class="mainmenubtn">Seasons</button>
-  <div class="dropdown-child">
-    {% for filter in list_season %}
-      <a href="#">{{ filter }}</a>
-{% endfor %}
-  </div>
-</div>
-{% for filter in list_season %}
-        <br>
-        {{ filter }}
-        <input type="checkbox" value="">
-{% endfor %}
-        <br>
-        <br>
-        <br>
-{% for filter in list_gender %}
-<br>
-        {{ filter }}
-        <input type="radio" name="gender" value="true">
-
-{% endfor %}
-        <br>
-        <br>
-        <br>
-    <button type="submit">Фильтровать</button>
-</form>
+<header class='header'>
 
 </header>
