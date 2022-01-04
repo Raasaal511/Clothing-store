@@ -22,4 +22,4 @@ class Home(ListView):
 def filter_products(request, season_slug) -> render:
     filter_clothes = Product.objects.filter(season=season_slug)
 
-    return render(request, 'main/filter_product.html', {'filter_clothes': filter_clothes})
+    return render(request, 'main/filter.html', {'filter_clothes': filter_clothes})
