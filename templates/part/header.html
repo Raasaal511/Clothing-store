@@ -1,3 +1,28 @@
 <header class='header'>
+    <nav class="nav">
+        <ul class="nav_list">
+            <li class="nav_item">
+                <p>Сезоны <i class="arrow right"></i></p>
+                <ul class="nav_drop_menu drop_down">
 
+                    {% for season in seasons %}
+                        <li class="nav_drop_item">{{ season.0 }}</li>
+                    {% endfor %}
+
+                </ul>
+            </li>
+
+            <li class="nav_item">
+                <p>Пол <i class="arrow right"></i></p>
+                <ul class="nav_drop_menu drop_down">
+
+                    {% for gender in genders %}
+                        <li class="nav_drop_item">{{ gender.1 }}</li>
+                    {% endfor %}
+
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
 </header>

@@ -7,7 +7,33 @@
     <link rel="stylesheet" href='{% static "css/styles.css" %}'>
 </head>
 <body>
+
 {% include "part/header.html" %}
+<form method="get">
+    {{ filter.form }}
+    <button type="submit">Search</button>
+</form>
+<div class="main_content">
+
+    <div class="products">
+
+        {% for product in filter.qs %}
+            <div class="product">
+                <div class="product_img">
+                    <img src="{{ product.image.url }}" alt="" width="160" height="110">
+                </div>
+                <div class="product_title">
+                    <span class="product_brand">{{ product.brand }}</span> | {{ product }}
+                    {{ product.gender }}
+                </div>
+                <div class="description">{{ product.description|truncatechars:25 }}</div>
+                <div class="description">{{ product.season }}</div>
+                <div class="description">{{ product.price }}</div>
+            </div>
+        {% endfor %}
+
+    </div>
+</div>
 
 </body>
 </html>
